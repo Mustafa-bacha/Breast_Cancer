@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Breast Cancer Prediction</h1>
+        <p>Enter the 30 features below to predict whether a tumor is benign or malignant.</p>
+
+        <form id="prediction-form">
+            <div class="form-grid">
+                <!-- Dynamically generate input fields for all 30 features -->
+                <div class="form-group">
+                    <label for="mean radius">Mean Radius</label>
+                    <input type="number" step="any" id="mean radius" name="mean radius" value="14.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean texture">Mean Texture</label>
+                    <input type="number" step="any" id="mean texture" name="mean texture" value="20.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean perimeter">Mean Perimeter</label>
+                    <input type="number" step="any" id="mean perimeter" name="mean perimeter" value="90.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean area">Mean Area</label>
+                    <input type="number" step="any" id="mean area" name="mean area" value="600.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean smoothness">Mean Smoothness</label>
+                    <input type="number" step="any" id="mean smoothness" name="mean smoothness" value="0.09" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean compactness">Mean Compactness</label>
+                    <input type="number" step="any" id="mean compactness" name="mean compactness" value="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean concavity">Mean Concavity</label>
+                    <input type="number" step="any" id="mean concavity" name="mean concavity" value="0.08" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean concave points">Mean Concave Points</label>
+                    <input type="number" step="any" id="mean concave points" name="mean concave points" value="0.04" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean symmetry">Mean Symmetry</label>
+                    <input type="number" step="any" id="mean symmetry" name="mean symmetry" value="0.18" required>
+                </div>
+                <div class="form-group">
+                    <label for="mean fractal dimension">Mean Fractal Dimension</label>
+                    <input type="number" step="any" id="mean fractal dimension" name="mean fractal dimension" value="0.06" required>
+                </div>
+                <div class="form-group">
+                    <label for="radius error">Radius Error</label>
+                    <input type="number" step="any" id="radius error" name="radius error" value="0.4" required>
+                </div>
+                <div class="form-group">
+                    <label for="texture error">Texture Error</label>
+                    <input type="number" step="any" id="texture error" name="texture error" value="1.2" required>
+                </div>
+                <div class="form-group">
+                    <label for="perimeter error">Perimeter Error</label>
+                    <input type="number" step="any" id="perimeter error" name="perimeter error" value="2.8" required>
+                </div>
+                <div class="form-group">
+                    <label for="area error">Area Error</label>
+                    <input type="number" step="any" id="area error" name="area error" value="40.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="smoothness error">Smoothness Error</label>
+                    <input type="number" step="any" id="smoothness error" name="smoothness error" value="0.007" required>
+                </div>
+                <div class="form-group">
+                    <label for="compactness error">Compactness Error</label>
+                    <input type="number" step="any" id="compactness error" name="compactness error" value="0.02" required>
+                </div>
+                <div class="form-group">
+                    <label for="concavity error">Concavity Error</label>
+                    <input type="number" step="any" id="concavity error" name="concavity error" value="0.03" required>
+                </div>
+                <div class="form-group">
+                    <label for="concave points error">Concave Points Error</label>
+                    <input type="number" step="any" id="concave points error" name="concave points error" value="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="symmetry error">Symmetry Error</label>
+                    <input type="number" step="any" id="symmetry error" name="symmetry error" value="0.03" required>
+                </div>
+                <div class="form-group">
+                    <label for="fractal dimension error">Fractal Dimension Error</label>
+                    <input type="number" step="any" id="fractal dimension error" name="fractal dimension error" value="0.004" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst radius">Worst Radius</label>
+                    <input type="number" step="any" id="worst radius" name="worst radius" value="16.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst texture">Worst Texture</label>
+                    <input type="number" step="any" id="worst texture" name="worst texture" value="25.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst perimeter">Worst Perimeter</label>
+                    <input type="number" step="any" id="worst perimeter" name="worst perimeter" value="105.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst area">Worst Area</label>
+                    <input type="number" step="any" id="worst area" name="worst area" value="800.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst smoothness">Worst Smoothness</label>
+                    <input type="number" step="any" id="worst smoothness" name="worst smoothness" value="0.12" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst compactness">Worst Compactness</label>
+                    <input type="number" step="any" id="worst compactness" name="worst compactness" value="0.25" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst concavity">Worst Concavity</label>
+                    <input type="number" step="any" id="worst concavity" name="worst concavity" value="0.3" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst concave points">Worst Concave Points</label>
+                    <input type="number" step="any" id="worst concave points" name="worst concave points" value="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst symmetry">Worst Symmetry</label>
+                    <input type="number" step="any" id="worst symmetry" name="worst symmetry" value="0.3" required>
+                </div>
+                <div class="form-group">
+                    <label for="worst fractal dimension">Worst Fractal Dimension</label>
+                    <input type="number" step="any" id="worst fractal dimension" name="worst fractal dimension" value="0.08" required>
+                </div>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="result" class="result hidden">
+            <h2>Prediction Result</h2>
+            <p><strong>Result:</strong> <span id="result-message"></span></p>
+            <p><strong>Prediction (0 = Malignant, 1 = Benign):</strong> <span id="prediction"></span></p>
+            <p><strong>Probability of Benign:</strong> <span id="probability"></span></p>
+            <p><strong>Confidence Level:</strong> <span id="confidence"></span></p>
+            <p><strong>Confidence Explanation:</strong> <span id="confidence-explanation"></span></p>
+            <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
